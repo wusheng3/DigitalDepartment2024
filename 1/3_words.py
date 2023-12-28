@@ -8,7 +8,7 @@ def read_words():
     word_list.sort(key=len)
     shortest_word = word_list[-1]
     longest_word = word_list[0]
-    if set(shortest_word) == set(longest_word):
+    if set(longest_word).issubset(set(shortest_word)):
         print("ДА")
     else:
         print("НЕТ")
